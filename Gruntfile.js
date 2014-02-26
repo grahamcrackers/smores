@@ -321,6 +321,14 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Copies dist folder to gh-pages branch
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src:['**']
     }
   });
 
