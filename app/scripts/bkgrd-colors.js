@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('MyDirectives', []);
+var myDir = angular.module('MyDirectives', []);
 
-var app = angular.module('smoresApp', []);
+//var app = angular.module('smoresApp', []);
 
-app.directive('bkgrdColor', function() {
+myDir.directive('bgColor', function() {
     var linkFunction = function(scope, element, attributes) {
-        var nav = element.children()[0];
+        var nav = element.parent('body');
         $(nav).on('click', function() {
             $('body').css({'background-color': 'blue'});
         });

@@ -1,13 +1,12 @@
 'use strict';
 
 
-
-
 var app = angular.module('smoresApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'MyDirectives'
 ]);
 
 
