@@ -20,7 +20,7 @@ myDir.directive('bgColor', function($location, $rootScope) {
 
             //Tells me the path after the change in the url
             $('.nav').on('click', function() {
-                console.log("location.path(): " + $location.path())
+                //console.log("location.path(): " + $location.path())
             });
 
         });
