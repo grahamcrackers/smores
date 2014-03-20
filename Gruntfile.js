@@ -326,7 +326,7 @@ module.exports = function (grunt) {
     // Copies dist folder to gh-pages branch
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'app'
       },
       src:['**']
     }

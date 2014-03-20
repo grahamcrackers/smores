@@ -2,18 +2,34 @@
 
 var myDir = angular.module('MyDirectives', []);
 
-//var app = angular.module('smoresApp', []);
-
-myDir.directive('bgColor', function() {
+myDir.directive('bgColor', function($location, $rootScope) {
     var linkFunction = function(scope, element, attributes) {
-        var nav = element.parent('body');
-        $(nav).on('click', function() {
-            $('body').css({'background-color': 'blue'});
+
+
+        //Fire off the function to change the back ground color after the url has been changed
+        $rootScope.$on('$locationChangeSuccess', function(event, next, current){
+
+            var snapContent = $('.snap-content');
+
+            if ($location.path() === '/') {
+                snapContent.css({'background-color': 'blue'});
+                console.log($location.path());
+            } else {
+                snapContent.css({'background-color': 'white'});
+            }
+
+            //Tells me the path after the change in the url
+            $('.nav').on('click', function() {
+                console.log("location.path(): " + $location.path())
+            });
+
         });
+
+
     };
 
     return {
-        restrict: 'EA',
+        restrict: 'A',
         link: linkFunction
         //transclude: false,
         //scope: '&'
