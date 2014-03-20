@@ -12,7 +12,7 @@ myDir.directive('bgColor', function($location, $rootScope) {
             var snapContent = $('.snap-content');
 
             if ($location.path() === '/') {
-                snapContent.css({'background-color': 'blue'});
+                snapContent.css({'background-color': '#a57d50'});
                 console.log($location.path());
             } else {
                 snapContent.css({'background-color': 'white'});
