@@ -16,7 +16,7 @@
         var settings = {
             element: null,
             dragger: null,
-            disable: 'right',
+            disable: 'none',
             addBodyClasses: true,
             hyperextensible: true,
             resistance: 0.5,
@@ -26,7 +26,7 @@
             maxPosition: 266,
             minPosition: -266,
             tapToClose: true,
-            touchToDrag: false,
+            touchToDrag: true,
             slideIntent: 40, // degrees
             minDragDistance: 5
         },
